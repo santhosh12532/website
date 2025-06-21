@@ -1,13 +1,13 @@
 {
   "main": {
-    "name": "Manchivaru Santhosh Kumar",
+    "name": "Santhosh",
     "description": "I am a web development engineer and I use react to develop pages",
     "image": "profilepic.jpg",
     "bio": "Hi, I am a full stack developer. I'm interested in the frontend and backend stack like trying new things and building great projects.",
     "contactmessage": "Contact Me",
     "email": "santhosh12532@gmail.com",
     "phone": "-",
-    "github": "https://github.com/manchivarusanthosh",
+    "github": "https://github.com/santhosh12532",
     "project": "https://manchivaru.blogspot.com",
     "address": {
       "street": "-",
@@ -62,7 +62,7 @@
       }
     ],
     "work": [
-       {
+      {
         "company": "Fractal Analytics",
         "title": "Frontend Developer",
         "years": "July 2022 - Present",
@@ -96,19 +96,19 @@
     "skills": [
       {
         "name": "ReactJs",
-        "level": "70%"
+        "level": "90%"
       },
       {
         "name": "JavaScript",
-        "level": "65%"
+        "level": "75%"
       },
       {
         "name": "HTML",
-        "level": "65%"
+        "level": "95%"
       },
       {
         "name": "CSS",
-        "level": "65%"
+        "level": "85%"
       },
       {
         "name": "BootStrap",
@@ -116,7 +116,7 @@
       },
       {
         "name": "Python",
-        "level": "60%"
+        "level": "70%"
       },
       {
         "name": "NodeJS",
