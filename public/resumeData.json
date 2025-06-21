@@ -1,0 +1,194 @@
+{
+  "main": {
+    "name": "Manchivaru Santhosh Kumar",
+    "description": "I am a web development engineer and I use react to develop pages",
+    "image": "profilepic.jpg",
+    "bio": "Hi, I am a full stack developer. I'm interested in the frontend and backend stack like trying new things and building great projects.",
+    "contactmessage": "Contact Me",
+    "email": "santhosh12532@gmail.com",
+    "phone": "-",
+    "github": "https://github.com/manchivarusanthosh",
+    "project": "https://manchivaru.blogspot.com",
+    "address": {
+      "street": "-",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zip": ""
+    },
+    "website": "",
+    "resumedownload": "",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "facebook.com",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "twitter",
+        "url": "http://twitter.com",
+        "className": "fa fa-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/manchivaru-santhosh-kumar-b39a5b1a9/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "http://instagram.com/manchivaru_santhosh",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/manchivarusanthosh",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "education": [
+      {
+        "school": "Malla Reddy College of Engineering & Technology",
+        "degree": "B.Tech",
+        "graduated": "April 2017",
+        "description": "Computer Science & Engineering"
+      },
+      {
+        "school": "New Era Jr College",
+        "degree": "M.P.C",
+        "graduated": "March 2013",
+        "description": ""
+      }
+    ],
+    "work": [
+       {
+        "company": "Fractal Analytics",
+        "title": "Frontend Developer",
+        "years": "July 2022 - Present",
+        "description": "Presently working as Frontend developer (Web App Development using React)."
+      },
+      {
+        "company": "Senseforth(A Fractal Company)",
+        "title": "Frontend Developer",
+        "years": "July 2022 - May 2023",
+        "description": "Frontend developer (Web App Development using React)."
+      },
+      {
+        "company": "Perfect & Complete Solutions",
+        "title": "Full Stack Developer",
+        "years": "July 2021 - July 2022",
+        "description": "Full stack developer (Web App Development using React)."
+      },
+      {
+        "company": "Ultimo Soft",
+        "title": "Programmer",
+        "years": "Dec 2019 - Dec 2020",
+        "description": "Worked on NetSuite CRM where javascript is used for maintaing pages and also worked on admin part"
+      },
+      {
+        "company": "Cognizant",
+        "title": "Senior Process Executive",
+        "years": "Aug 2017 - Nov 2019",
+        "description": "Worked on GRM tool and ICS which helps in finding the company information and Updating the information in GRM Tool."
+      }
+    ],
+    "skills": [
+      {
+        "name": "ReactJs",
+        "level": "70%"
+      },
+      {
+        "name": "JavaScript",
+        "level": "65%"
+      },
+      {
+        "name": "HTML",
+        "level": "65%"
+      },
+      {
+        "name": "CSS",
+        "level": "65%"
+      },
+      {
+        "name": "BootStrap",
+        "level": "50%"
+      },
+      {
+        "name": "Python",
+        "level": "60%"
+      },
+      {
+        "name": "NodeJS",
+        "level": "50%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Restaurant Website",
+        "category": "sample website for a restaurant",
+        "image": "01.jpg",
+        "url": "https://santhoshhotel.netlify.app/",
+        "github": "https://github.com/manchivarusanthosh/restaurant_website"
+      },
+      {
+        "title": "Simple Budget Application",
+        "category": "simple calculation application",
+        "image": "02.jpg",
+        "url": "https://btappsanthosh.netlify.app/",
+        "github": "https://github.com/manchivarusanthosh/budget_app"
+      },
+      {
+        "title": "Nxt Trendz",
+        "category": "E commerce website",
+        "image": "nxt_trendz.jpg",
+        "url": "https://santhoshnxtrendz.netlify.app/",
+        "github": "https://github.com/manchivarusanthosh/nxt-trendz"
+      },
+      {
+        "title": "Admin UI with React",
+        "category": "admin table ",
+        "image": "03.jpg",
+        "url": "https://manchivaruadminui.netlify.app/",
+        "github": "https://github.com/manchivarusanthosh/admin_ui"
+      },
+      {
+        "title": "Netflix Clone",
+        "category": "netflix clone",
+        "image": "04.jpg",
+        "url": "https://manchivaru-n-clone.netlify.app",
+        "github": "https://github.com/manchivarusanthosh/netflix_clone"
+      },
+      {
+        "title": "Simple Image Search App",
+        "category": "image search app with styling",
+        "image": "05.jpg",
+        "url": "",
+        "github": "https://github.com/manchivarusanthosh/image_search"
+      },
+      {
+        "title": "React Admin",
+        "category": "react admin",
+        "image": "06.jpg",
+        "url": "",
+        "github": "https://github.com/manchivarusanthosh/react-admin-ex"
+      },
+      {
+        "title": "Leave Management System",
+        "category": "leave management app for HR",
+        "image": "07.jpg",
+        "url": "https://pcsitspl.netlify.app/",
+        "github": "https://github.com/manchivarusanthosh/react-admin-ex"
+      },
+      {
+        "title": "Movies App using Redux",
+        "category": "Movies App using Redux",
+        "image": "08.jpg",
+        "url": "https://movies-a.netlify.app/",
+        "github": "https://github.com/manchivarusanthosh/movies_application"
+      }
+    ]
+  }
+}
