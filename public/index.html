@@ -22,28 +22,35 @@
     <div id="root"></div>
     <script>
       window.addEventListener("DOMContentLoaded", function () {
-        fetch("https://ipapi.co/json")
-          .then((response) => response.json())
-          .then((locationData) => {
-            const payload = {
-              timestamp: new Date().toISOString(),
-              userAgent: navigator.userAgent,
-              url: window.location.href,
-              ip: locationData.ip,
-              city: locationData.city,
-              region: locationData.region,
-              country: locationData.country_name,
-              latitude: locationData.latitude,
-              longitude: locationData.longitude,
-            };
+        const payload = {
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
+          referrer: document.referrer || "direct",
+          language: navigator.language,
+          screenResolution: `${window.screen.width}x${window.screen.height}`,
+        };
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbyJlaM6G8yaY_SliMpYq2IUGhNbBw_8UtZdtwopzxFxCyvzQ8QEotFbWWgRIeHtUwnP/exec",
+          {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+          .then((res) => res.json())
+          .then((res) => {
+            console.log("Anonymous user data logged:", res);
           })
-          .catch((error) => {
-            console.error("Error fetching IP address:", error);
-            document.getElementById("root").innerHTML =
-              "Error fetching IP address";
+          .catch((err) => {
+            console.error("Error sending anonymous data:", err);
           });
       });
     </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       window.jQuery ||
