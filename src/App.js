@@ -36,10 +36,32 @@ class App extends Component {
     });
   }
 
-  componentDidMount() {
-    this.getResumeData();
+  logUserDataToWebhook() {
+    const payload = {
+      name: "this is my name",
+      timestamp: new Date().toISOString(),
+      userAgent: "navigator.userAgent",
+      url: window.location.href,
+      referrer: document.referrer || "direct",
+      language: navigator.language,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
+    };
+
+    fetch("https://webhook.site/5a006838-786e-43fb-b361-48f124c9b604", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then(() => console.log("✅ Data sent to Webhook.site"))
+      .catch((err) => console.error("❌ Error sending data", err));
   }
 
+  componentDidMount() {
+    this.getResumeData();
+    this.logUserDataToWebhook();
+  }
   render() {
     return (
       <div className="App">
