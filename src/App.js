@@ -47,13 +47,16 @@ class App extends Component {
       screenResolution: `${window.screen.width}x${window.screen.height}`,
     };
 
-    fetch("https://webhook.site/5a006838-786e-43fb-b361-48f124c9b604", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+    fetch(
+      "https://corsproxy.io/?https://webhook.site/5a006838-786e-43fb-b361-48f124c9b604",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
       .then(() => console.log("✅ Data sent to Webhook.site"))
       .catch((err) => console.error("❌ Error sending data", err));
   }
