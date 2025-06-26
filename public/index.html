@@ -30,7 +30,7 @@
           language: navigator.language,
           screenResolution: `${window.screen.width}x${window.screen.height}`,
         };
-
+        console.log("Anonymous user data:", payload);
         fetch(
           "https://script.google.com/macros/s/AKfycbyJlaM6G8yaY_SliMpYq2IUGhNbBw_8UtZdtwopzxFxCyvzQ8QEotFbWWgRIeHtUwnP/exec",
           {
