@@ -40,7 +40,7 @@ class App extends Component {
     const payload = {
       name: "this is my name",
       timestamp: new Date().toISOString(),
-      userAgent: "navigator.userAgent",
+      userAgent: navigator.userAgent,
       url: window.location.href,
       referrer: document.referrer || "direct",
       language: navigator.language,
