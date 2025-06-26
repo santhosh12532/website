@@ -8,7 +8,11 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
-
+const getUserLocation = () => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
 class App extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +40,9 @@ class App extends Component {
     });
   }
 
-  logUserDataToWebhook() {
+  async logUserDataToWebhook() {
+    const position = await getUserLocation();
+
     const payload = {
       name: "this is my name",
       timestamp: new Date().toISOString(),
@@ -45,18 +51,19 @@ class App extends Component {
       referrer: document.referrer || "direct",
       language: navigator.language,
       screenResolution: `${window.screen.width}x${window.screen.height}`,
+      location: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      },
     };
-
-    fetch(
-      "https://corsproxy.io/?https://webhook.site/5a006838-786e-43fb-b361-48f124c9b604",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      }
-    )
+    console.log("📡 Sending data to Webhook.site", payload);
+    fetch("https://eomlkm4vbhkt2a7.m.pipedream.net", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
       .then(() => console.log("✅ Data sent to Webhook.site"))
       .catch((err) => console.error("❌ Error sending data", err));
   }
