@@ -20,7 +20,30 @@
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
-
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        fetch("https://ipapi.co/json")
+          .then((response) => response.json())
+          .then((locationData) => {
+            const payload = {
+              timestamp: new Date().toISOString(),
+              userAgent: navigator.userAgent,
+              url: window.location.href,
+              ip: locationData.ip,
+              city: locationData.city,
+              region: locationData.region,
+              country: locationData.country_name,
+              latitude: locationData.latitude,
+              longitude: locationData.longitude,
+            };
+          })
+          .catch((error) => {
+            console.error("Error fetching IP address:", error);
+            document.getElementById("root").innerHTML =
+              "Error fetching IP address";
+          });
+      });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
       window.jQuery ||
