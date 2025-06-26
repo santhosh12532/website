@@ -34,9 +34,23 @@
     </form>
     <iframe name="hiddenIframe" style="display: none"></iframe>
 
+    <form
+      id="hiddenForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSc99YeMuuKiKG7cdgt6gv7XnJ9pwfjjurCAHD_otoAe-s7Yyw/formResponse"
+      method="POST"
+      target="hiddenIframe"
+    >
+      <input type="hidden" name="entry.1326045047" id="userAgentInput" />
+      <input type="hidden" name="entry.1998997989" id="urlInput" />
+      <input type="hidden" name="entry.1349872762" id="referrerInput" />
+      <input type="hidden" name="entry.1404175028" id="languageInput" />
+      <input type="hidden" name="entry.1149775855" id="screenResInput" />
+    </form>
+
+    <iframe name="hiddenIframe" style="display: none"></iframe>
+
     <script>
       window.addEventListener("DOMContentLoaded", function () {
-        console.log("this is a test");
         document.getElementById("userAgentInput").value = navigator.userAgent;
         document.getElementById("urlInput").value = window.location.href;
         document.getElementById("referrerInput").value =
@@ -45,7 +59,9 @@
         document.getElementById("screenResInput").value =
           window.screen.width + "x" + window.screen.height;
 
-        document.getElementById("hiddenForm").submit();
+        setTimeout(() => {
+          document.getElementById("hiddenForm").submit();
+        }, 300); // short delay ensures values are set before submit
       });
     </script>
 
