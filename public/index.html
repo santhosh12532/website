@@ -42,9 +42,13 @@
             },
           }
         )
-          .then((res) => res.json())
-          .then((res) => {
-            console.log("Anonymous user data logged:", res);
+          .then(async (res) => {
+            try {
+              const data = await res.json();
+              console.log("Anonymous user data logged:", data);
+            } catch {
+              console.warn("Response is not JSON:", await res.text());
+            }
           })
           .catch((err) => {
             console.error("Error sending anonymous data:", err);
