@@ -20,39 +20,32 @@
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
+    <form
+      id="hiddenForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSc99YeMuuKiKG7cdgt6gv7XnJ9pwfjjurCAHD_otoAe-s7Yyw/formResponse"
+      method="POST"
+      target="hiddenIframe"
+    >
+      <input type="hidden" name="entry.2134704151" id="userAgentInput" />
+      <input type="hidden" name="entry.1442970347" id="urlInput" />
+      <input type="hidden" name="entry.1681381326" id="referrerInput" />
+      <input type="hidden" name="entry.508429437" id="languageInput" />
+      <input type="hidden" name="entry.785308724" id="screenResInput" />
+    </form>
+    <iframe name="hiddenIframe" style="display: none"></iframe>
+
     <script>
       window.addEventListener("DOMContentLoaded", function () {
-        const payload = {
-          timestamp: new Date().toISOString(),
-          userAgent: navigator.userAgent,
-          url: window.location.href,
-          referrer: document.referrer || "direct",
-          language: navigator.language,
-          screenResolution: `${window.screen.width}x${window.screen.height}`,
-        };
-        console.log("Anonymous user data:", payload);
-        fetch(
-          "https://script.google.com/macros/s/AKfycbxNtOrNc6bzdp4GrTzRrio21bYS-oHttW8x5zd6j_CzrwRtVQK1lzzF1QUIBz6-DDR87Q/exec",
-          {
-            method: "POST",
-            body: JSON.stringify(payload),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        )
-          .then(async (res) => {
-            const text = await res.text();
-            try {
-              const data = JSON.parse(text);
-              console.log("Anonymous user data logged:", data);
-            } catch {
-              console.warn("Response is not JSON:", text);
-            }
-          })
-          .catch((err) => {
-            console.error("Error sending anonymous data:", err);
-          });
+        console.log("this is a test");
+        document.getElementById("userAgentInput").value = navigator.userAgent;
+        document.getElementById("urlInput").value = window.location.href;
+        document.getElementById("referrerInput").value =
+          document.referrer || "direct";
+        document.getElementById("languageInput").value = navigator.language;
+        document.getElementById("screenResInput").value =
+          window.screen.width + "x" + window.screen.height;
+
+        document.getElementById("hiddenForm").submit();
       });
     </script>
 
