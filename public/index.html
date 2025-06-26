@@ -43,11 +43,12 @@
           }
         )
           .then(async (res) => {
+            const text = await res.text();
             try {
-              const data = await res.json();
+              const data = JSON.parse(text);
               console.log("Anonymous user data logged:", data);
             } catch {
-              console.warn("Response is not JSON:", await res.text());
+              console.warn("Response is not JSON:", text);
             }
           })
           .catch((err) => {
