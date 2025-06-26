@@ -52,6 +52,7 @@
     <script>
       window.addEventListener("DOMContentLoaded", function () {
         document.getElementById("userAgentInput").value = navigator.userAgent;
+        console.log("User Agent: " + navigator.userAgent); // Log user agent to console
         document.getElementById("urlInput").value = window.location.href;
         document.getElementById("referrerInput").value =
           document.referrer || "direct";
