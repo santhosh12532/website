@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
-import MyResume from "../../src/ManchivaruResume.pdf";
+import MyResume from "../../src/SanthoshResume.pdf";
 class About extends Component {
   render() {
     if (!this.props.data) return null;
